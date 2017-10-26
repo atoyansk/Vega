@@ -2,7 +2,7 @@
 ## Complete Web System with Angular 2 + ASP.NET Core MVC
 
 ### Using the following:
-* Angular 2 (4+)
+* Angular 2
 * ASP.NET Core MVC
 * Entity Framework Core
 * LinQ
@@ -12,8 +12,10 @@
 
 ### System Features:
 * [x] CRUD
+* [x] Filtering, sorting and pagination
+* [x] Images and videos upload with Progress bar
 * [ ] Authentication and authorization
-* [ ] Filtering, sorting and pagination
-* [ ] Images and videos upload
 * [ ] Charts
+* [ ] Angular 2 Video Player
+* [ ] Angular 2 SlideShow
 
