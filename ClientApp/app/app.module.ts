@@ -55,8 +55,10 @@ Raven
     ],
     providers: [
       { provide: ErrorHandler, useClass: AppErrorHandler },
+      { provide: BrowserXhr, useClass: BrowserXhrWithProgress },
       VehicleService,
-      PhotoService
+      PhotoService,
+      ProgressService
     ]
 })
 export class AppModule {
