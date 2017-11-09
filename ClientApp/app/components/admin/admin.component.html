@@ -1,0 +1,19 @@
+<h1>Admin Page</h1>
+<main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
+    <h2>Dashboard</h2>
+    <hr>
+    <section class="row text-center placeholders">
+        <div class="col-md-6 col-sm-3 placeholder graph">
+            <chart type="pie" [data]="make" [options]="options"></chart>
+            <h4>Makes</h4>
+        </div>
+        <div class="col-md-6 col-sm-3 placeholder graph">
+            <chart type="pie" [data]="model" [options]="options"></chart>
+            <h4>Models</h4>
+        </div>
+        <div class="col-md-12 col-sm-12 placeholder graph">
+            <chart type="line" [data]="growth" [options]="options2"></chart>
+            <h4>Annual Growth</h4>
+        </div>
+    </section>
+</main>
