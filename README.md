@@ -14,7 +14,7 @@
 * [x] CRUD
 * [x] Filtering, sorting and pagination
 * [x] Images and videos upload with Progress bar
-* [ ] Authentication and authorization
+* [x] Authentication and authorization
 * [ ] Charts
 * [ ] Angular 2 Video Player
 * [ ] Angular 2 SlideShow
