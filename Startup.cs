@@ -10,6 +10,7 @@ using vega.Core;
 using AutoMapper;
 using vega.Core.Models;
 using vega.Controllers;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace Vega
 {
@@ -42,8 +43,14 @@ namespace Vega
 
             services.AddDbContext<VegaDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
 
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy(Policies.RequireAdminRole, policy => policy.RequireClaim("https://vega.com/roles", "Admin"));
+            });
+            
             // Add framework services.
             services.AddMvc();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,6 +72,13 @@ namespace Vega
             }
 
             app.UseStaticFiles();
+
+            var options = new JwtBearerOptions
+            {
+                Audience = "https://api.vega.com",
+                Authority = "https://vega-atoyansk.auth0.com/"
+            };
+            app.UseJwtBearerAuthentication(options);
 
             app.UseMvc(routes =>
             {
