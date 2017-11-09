@@ -15,7 +15,12 @@
 * [x] Filtering, sorting and pagination
 * [x] Images and videos upload with Progress bar
 * [x] Authentication and authorization
-* [ ] Charts
+* [x] Charts
 * [ ] Angular 2 Video Player
-* [ ] Angular 2 SlideShow
+* [ ] Angular 2 SlideShow 
+
+### To-Do List:
+* Solve problem to Sign Up using Auth0
+* Dynamic data on Charts
+* Delete action on images
 
