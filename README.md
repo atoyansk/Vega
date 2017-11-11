@@ -2,7 +2,8 @@
 ## Complete Web System with Angular 2 + ASP.NET Core MVC
 
 ### Using the following:
-* Angular 2
+* Angular 2 and TypeScript
+* Webpack
 * ASP.NET Core MVC
 * Entity Framework Core
 * LinQ
