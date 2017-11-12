@@ -42,7 +42,10 @@
           <span class="sr-only">{{ progress.percentage }}% Complete</span>
         </div>
       </div>
-      <img *ngFor="let photo of photos" src="/uploads/{{ photo.fileName }}" class="img-thumbnail">   
+      <div *ngFor="let photo of photos" class="img-thumbnail">
+          <button *ngIf="auth.isAuthenticated()" class="delImg" (click)="deleteImg()">x</button>
+        <img src="/uploads/{{ photo.fileName }}" >
+      </div>    
     </div>
   </div>
 </div>

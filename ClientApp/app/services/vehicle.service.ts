@@ -53,7 +53,7 @@ export class VehicleService {
   }
 
   delete(id) {
-    return this.authHttp.delete(this.vehiclesEndpoint + '/' + id)
+    return this.authHttp.delete('/api/vehicles/' + id)
       .map(res => res.json());
   }
 

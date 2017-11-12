@@ -10,6 +10,22 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-view-vehicle',
   templateUrl: './view-vehicle.component.html',
+  styles: [`
+  .delImg {
+    z-index: 999;
+    float: right;
+    background: red;
+    padding:0 6px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 5px;
+    border: none;
+  }
+`],
   providers: [
     { provide: BrowserXhr, useClass: BrowserXhrWithProgress },
     ProgressService
@@ -57,11 +73,25 @@ export class ViewVehicleComponent implements OnInit {
 
   delete(){
     if(confirm("Are you sure?")){
+      this.deleteAllImg();
       this.vehicleService.delete(this.vehicle.id)
         .subscribe(x =>{
           this.router.navigate(['/vehicles']);
         });
     }
+  }
+
+  deleteImg(){
+    if(confirm("Do you really want to delete this image?")){
+      // this.vehicleService.delete(this.vehicle.id)
+      //   .subscribe(x =>{
+      //     this.router.navigate(['/vehicles']);
+      //   });
+    }
+  }
+
+  deleteAllImg(){
+
   }
 
   uploadPhoto() {    

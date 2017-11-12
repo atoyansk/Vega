@@ -11,6 +11,8 @@ import { ToastyModule } from 'ng2-toasty';
 import { UniversalModule } from 'angular2-universal';
 
 import { ChartModule } from 'angular2-chartjs';
+import { NgxCarouselModule } from 'ngx-carousel';
+import 'hammerjs';
 import { AppComponent } from './components/app/app.component';
 import { AppErrorHandler } from './app.error-handler';
 import { VehicleService } from './services/vehicle.service';
@@ -49,6 +51,7 @@ Raven
         FormsModule,
         ToastyModule.forRoot(),
         ChartModule,
+        NgxCarouselModule,
         RouterModule.forRoot([
             { path: '', redirectTo: 'vehicles', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
