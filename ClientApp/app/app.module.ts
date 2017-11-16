@@ -13,6 +13,12 @@ import { UniversalModule } from 'angular2-universal';
 import { ChartModule } from 'angular2-chartjs';
 import { NgxCarouselModule } from 'ngx-carousel';
 import 'hammerjs';
+
+import {VgCoreModule} from 'videogular2/core';
+import {VgControlsModule} from 'videogular2/controls';
+import {VgOverlayPlayModule} from 'videogular2/overlay-play';
+import {VgBufferingModule} from 'videogular2/buffering';
+
 import { AppComponent } from './components/app/app.component';
 import { AppErrorHandler } from './app.error-handler';
 import { VehicleService } from './services/vehicle.service';
@@ -52,6 +58,10 @@ Raven
         ToastyModule.forRoot(),
         ChartModule,
         NgxCarouselModule,
+        VgCoreModule,
+        VgControlsModule,
+        VgOverlayPlayModule,
+        VgBufferingModule,
         RouterModule.forRoot([
             { path: '', redirectTo: 'vehicles', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },

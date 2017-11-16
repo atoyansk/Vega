@@ -4,31 +4,7 @@ import { NgxCarousel, NgxCarouselStore } from 'ngx-carousel';
 @Component({
     selector: 'home',
     templateUrl: './home.component.html',
-    styles: [`
-    .leftRs {
-        position: absolute;
-        margin: auto;
-        top: 0;
-        bottom: 0;
-        width: 50px;
-        height: 50px;
-        box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
-        border-radius: 999px;
-        left: 5px;
-    }
-
-    .rightRs {
-        position: absolute;
-        margin: auto;
-        top: 0;
-        bottom: 0;
-        width: 50px;
-        height: 50px;
-        box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
-        border-radius: 999px;
-        right: 5px;
-    }
-  `]
+    styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
   public carouselBanner: NgxCarousel;

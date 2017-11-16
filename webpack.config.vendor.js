@@ -43,7 +43,8 @@ module.exports = (env) => {
                 'ngx-carousel',
                 'raven-js',
                 'underscore',
-                'zone.js',
+                'videogular2',
+                'zone.js'
             ]
         },
         output: {
