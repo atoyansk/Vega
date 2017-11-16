@@ -23,5 +23,7 @@
 ### To-Do List:
 * Solve problem to Sign Up using Auth0
 * Dynamic data on Charts
+* Dynamic data on Slideshow
+* Dynamic data on Video Player
 * Delete action on images
 
